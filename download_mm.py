@@ -63,7 +63,8 @@ def save_imgs(folder, img_addrs):
 
 
 def download_mm(folder='OOXX', pages=10):
-    # os.mkdir(folder)
+    if not os.path.exists('OOXX'):
+        os.mkdir(folder)
     os.chdir(folder)
 
     url = "http://jandan.net/ooxx/"
